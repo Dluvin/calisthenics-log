@@ -1,0 +1,27 @@
+import type { ExerciseType } from "./types";
+
+export const DEFAULT_EXERCISES: ExerciseType[] = [
+  { id: "ex-push-up", name: "Push-up", category: "Push", tracking: "reps", notes: "Hands under shoulders, body in a straight line." },
+  { id: "ex-wide-push-up", name: "Wide push-up", category: "Push", tracking: "reps", notes: "Hands outside shoulder width." },
+  { id: "ex-diamond-push-up", name: "Diamond push-up", category: "Push", tracking: "reps", notes: "Thumbs and index fingers form a diamond." },
+  { id: "ex-pike-push-up", name: "Pike push-up", category: "Push", tracking: "reps", notes: "Hips high; targets shoulders." },
+  { id: "ex-knee-push-up", name: "Knee push-up", category: "Push", tracking: "reps", notes: "Knees on the floor for an easier variation." },
+  { id: "ex-squat", name: "Bodyweight squat", category: "Legs", tracking: "reps", notes: "Sit back, knees track over toes." },
+  { id: "ex-jump-squat", name: "Jump squat", category: "Legs", tracking: "reps", notes: "Explode up from the bottom of a squat." },
+  { id: "ex-reverse-lunge", name: "Reverse lunge", category: "Legs", tracking: "reps", notes: "Count each leg or total reps." },
+  { id: "ex-calf-raise", name: "Calf raise", category: "Legs", tracking: "reps", notes: "Rise onto the balls of the feet." },
+  { id: "ex-wall-sit", name: "Wall sit", category: "Legs", tracking: "seconds", notes: "Back against a wall, thighs parallel." },
+  { id: "ex-glute-bridge", name: "Glute bridge", category: "Legs", tracking: "reps", notes: "Squeeze glutes at the top." },
+  { id: "ex-plank", name: "Plank", category: "Core", tracking: "seconds", notes: "Hold a straight line from head to heels." },
+  { id: "ex-side-plank", name: "Side plank", category: "Core", tracking: "seconds", notes: "Log each side separately if you like." },
+  { id: "ex-crunch", name: "Crunch", category: "Core", tracking: "reps", notes: "Lift shoulders, keep lower back down." },
+  { id: "ex-sit-up", name: "Sit-up", category: "Core", tracking: "reps", notes: "Full sit to upright." },
+  { id: "ex-bicycle", name: "Bicycle crunch", category: "Core", tracking: "reps", notes: "Elbow to opposite knee." },
+  { id: "ex-leg-raise", name: "Lying leg raise", category: "Core", tracking: "reps", notes: "Keep lower back pressed to the floor." },
+  { id: "ex-hollow-hold", name: "Hollow body hold", category: "Core", tracking: "seconds", notes: "Lower back glued to the floor." },
+  { id: "ex-superman", name: "Superman", category: "Core", tracking: "reps", notes: "Lift chest and legs off the floor." },
+  { id: "ex-mountain-climber", name: "Mountain climber", category: "Full body", tracking: "reps", notes: "Each knee drive can count as one rep." },
+  { id: "ex-burpee", name: "Burpee", category: "Full body", tracking: "reps", notes: "Squat, plank, jump — no equipment." },
+  { id: "ex-jumping-jack", name: "Jumping jack", category: "Full body", tracking: "reps", notes: "Steady rhythm, land softly." },
+  { id: "ex-high-knees", name: "High knees", category: "Full body", tracking: "seconds", notes: "Drive knees up; stay light on the feet." },
+];
