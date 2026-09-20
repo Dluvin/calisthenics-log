@@ -58,11 +58,21 @@ export function goalProgress(
 
 export function formatValue(exercise: ExerciseType | undefined, value: number) {
   if (!exercise) return String(value);
-  return exercise.tracking === "seconds" ? `${value}s` : String(value);
+  if (exercise.tracking === "seconds") return `${value}s`;
+  if (exercise.tracking === "time") return `${value} min`;
+  return String(value);
 }
 
 export function unitLabel(exercise: ExerciseType | undefined) {
-  return exercise?.tracking === "seconds" ? "seconds" : "reps";
+  if (exercise?.tracking === "seconds") return "seconds";
+  if (exercise?.tracking === "time") return "minutes";
+  return "reps";
+}
+
+export function trackingLabel(exercise: ExerciseType | undefined) {
+  if (exercise?.tracking === "seconds") return "Hold time";
+  if (exercise?.tracking === "time") return "Time";
+  return "Reps";
 }
 
 export function toDateTimeLocal(iso: string) {

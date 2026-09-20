@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useStore } from "@/components/StoreProvider";
+import { trackingLabel } from "@/lib/stats";
 import type { ExerciseCategory, ExerciseType, TrackingMode } from "@/lib/types";
 
 const CATEGORIES: ExerciseCategory[] = ["Push", "Legs", "Core", "Full body", "Custom"];
@@ -97,6 +98,7 @@ export default function ExercisesPage() {
           >
             <option value="reps">Reps</option>
             <option value="seconds">Seconds (holds)</option>
+            <option value="time">Time</option>
           </select>
         </label>
         <label className="space-y-1.5 sm:col-span-2">
@@ -144,7 +146,7 @@ export default function ExercisesPage() {
                 <div>
                   <p className="font-medium text-emerald-50">{exercise.name}</p>
                   <p className="text-sm text-emerald-200/70">
-                    {exercise.tracking === "seconds" ? "Hold time" : "Reps"}
+                    {trackingLabel(exercise)}
                     {exercise.notes ? ` · ${exercise.notes}` : ""}
                   </p>
                 </div>

@@ -1,4 +1,4 @@
-export type TrackingMode = "reps" | "seconds";
+export type TrackingMode = "reps" | "seconds" | "time";
 export type GoalPeriod = "day" | "week";
 export type ExerciseCategory =
   | "Push"

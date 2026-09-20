@@ -170,7 +170,7 @@ export function WorkoutEditor({
 
       {workout.entries.length === 0 ? (
         <p className="rounded-2xl border border-dashed border-emerald-800 px-4 py-8 text-center text-sm text-emerald-200/70">
-          Add an exercise, then enter reps or hold time for each set.
+          Add an exercise, then enter reps, hold seconds, or minutes for each set.
         </p>
       ) : (
         <div className="space-y-4">
