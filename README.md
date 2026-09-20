@@ -12,6 +12,10 @@ A local-first workout log for **bodyweight training** — no gym equipment requi
 
 Data stays in your browser (`localStorage`). Clearing site data will erase the log.
 
+## Public site
+
+https://dluvin.github.io/calisthenics-log/
+
 ## Run locally
 
 ```bash

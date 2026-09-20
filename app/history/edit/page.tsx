@@ -1,16 +1,18 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
+import { Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { WorkoutEditor } from "@/components/WorkoutEditor";
 import { useStore } from "@/components/StoreProvider";
 
-export default function WorkoutDetailPage() {
-  const { id } = useParams<{ id: string }>();
+function HistoryEditInner() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
   const { workouts, deleteWorkout } = useStore();
   const workout = workouts.find((item) => item.id === id);
 
-  if (!workout) {
+  if (!id || !workout) {
     return <p className="text-sm text-emerald-200/70">Workout not found.</p>;
   }
 
@@ -40,5 +42,13 @@ export default function WorkoutDetailPage() {
         onSaved={() => router.push("/history")}
       />
     </div>
+  );
+}
+
+export default function HistoryEditPage() {
+  return (
+    <Suspense fallback={<p className="text-sm text-emerald-200/70">Loading…</p>}>
+      <HistoryEditInner />
+    </Suspense>
   );
 }

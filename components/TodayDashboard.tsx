@@ -103,7 +103,7 @@ export function TodayDashboard() {
                 key={workout.id}
                 className="rounded-2xl border border-emerald-900 bg-emerald-950/30 px-4 py-3 text-sm text-emerald-100"
               >
-                <Link href={`/history/${workout.id}`} className="hover:text-emerald-300">
+                <Link href={`/history/edit?id=${workout.id}`} className="hover:text-emerald-300">
                   {new Date(workout.startedAt).toLocaleTimeString(undefined, {
                     hour: "numeric",
                     minute: "2-digit",

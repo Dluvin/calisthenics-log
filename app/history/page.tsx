@@ -24,7 +24,7 @@ export default function HistoryPage() {
           {workouts.map((workout) => (
             <li key={workout.id}>
               <Link
-                href={`/history/${workout.id}`}
+                href={`/history/edit?id=${workout.id}`}
                 className="block rounded-2xl border border-emerald-900 bg-emerald-950/30 px-4 py-4 hover:border-emerald-600"
               >
                 <p className="font-medium text-emerald-50">{formatWhen(workout.startedAt)}</p>
